@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Way - Guides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">FIND YOUR WAY</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="hotels.html">Hotels</a></li>
+    <li><a href="guides.html" class="active">Guides</a></li>
+    <li><a href="#" onclick="showTransportAlert(event)">Transportation</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+  <div class="booking-form">
+    <h2>Hire a Tour Guide</h2>
+    <form onsubmit="handleGuideSearch(event)">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="destination">Tour Destination</label>
+        <select id="destination" name="destination">
+          <option value="Cox's Bazar">Cox's Bazar</option>
+          <option value="Bandarban">Bandarban</option>
+          <option value="Sylhet" disabled>Sylhet (Coming Soon)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="guidePrice">Guide Price Range: <span id="guidePriceDisplay" class="price-value">3,500 BDT</span></label>
+        <div class="price-container">
+          <input type="range" id="guidePrice" name="guide_price" min="2000" max="5000" step="100" value="3500" oninput="updateGuidePrice(this.value)">
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #888; margin-top: 5px;">
+            <span>2,000 BDT</span>
+            <span>5,000 BDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="guideExperience">Guide Experience Level: <span id="expDisplay" class="price-value">5</span></label>
+        <div class="price-container">
+          <input type="range" id="guideExperience" name="experience" min="1" max="10" step="1" value="5" oninput="updateExpDisplay(this.value)">
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #888; margin-top: 5px;">
+            <span>1</span>
+            <span>10</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Tour Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      
+      <button type="submit" class="btn">Request Guide</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Find Your Way | Travel Smart, Travel Easy</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

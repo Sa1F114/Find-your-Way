@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Best Western Heritage ",
+    "city": "Cox's Bazar",
+    "pricePerNight": 7500,
+    "amenities": [ "WiFi", "AC", "Swimming Pool" ],
+    "contact": "01777744049"
+  },
+
+  {
+    "name": "Baywatch",
+    "city": "Cox's Bazar",
+    "pricePerNight": 14500,
+    "amenities": [ "WiFi", "AC", "Swimming Pool" ],
+    "contact": "01897-626000"
+  },
+  {
+    "name": "Ocean Paradise",
+    "city": "Cox's Bazar",
+    "pricePerNight": 5500,
+    "amenities": [ "WiFi", "AC", "Swimming Pool" ],
+    "contact": "01820000002"
+  },
+  {
+    "name": "Hotel Coral Reef",
+    "city": "Cox's Bazar",
+    "pricePerNight": 4800,
+    "amenities": [ "WiFi", "AC", "Restaurant" ],
+    "contact": "01820000003"
+  },
+  {
+    "name": "Long Beach Hotel",
+    "city": "Cox's Bazar",
+    "pricePerNight": 7000,
+    "amenities": [ "WiFi", "AC", "Sea View", "Gym" ],
+    "contact": "01820000004"
+  },
+  {
+    "name": "Hotel Sea Crown",
+    "city": "Cox's Bazar",
+    "pricePerNight": 5200,
+    "amenities": [ "WiFi", "AC", "Breakfast" ],
+    "contact": "01820000005"
+  },
+  {
+    "name": "Hill View Resort",
+    "city": "Bandarban",
+    "pricePerNight": 4500,
+    "amenities": [ "WiFi", "Mountain View", "Restaurant" ],
+    "contact": "01830000001"
+  },
+  {
+    "name": "Nilgiri Tourist Resort",
+    "city": "Bandarban",
+    "pricePerNight": 6000,
+    "amenities": [ "WiFi", "AC", "Scenic View" ],
+    "contact": "01830000002"
+  },
+  {
+    "name": "Hotel Green Land",
+    "city": "Bandarban",
+    "pricePerNight": 3800,
+    "amenities": [ "WiFi", "Restaurant" ],
+    "contact": "01830000003"
+  },
+  {
+    "name": "Meghla Eco Resort",
+    "city": "Bandarban",
+    "pricePerNight": 5200,
+    "amenities": [ "WiFi", "Nature View", "Parking" ],
+    "contact": "01830000004"
+  },
+  {
+    "name": "Hotel Hill Crown",
+    "city": "Bandarban",
+    "pricePerNight": 4000,
+    "amenities": [ "WiFi", "AC" ],
+    "contact": "01830000005"
+  },
+  {
+    "name": "Hotel Plaza Bandarban ",
+    "city": "Bandarban",
+    "pricePerNight": 3500,
+    "amenities": [ "WiFi", "AC" ],
+    "contact": "01678-060107"
+  }
+]

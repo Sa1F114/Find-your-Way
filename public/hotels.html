@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Way - Hotels</title>
+  <style>
+    /* SHARED CSS */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #000; color: #fff; overflow-x: hidden; }
+
+    .navbar {
+      position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(5px); padding: 15px 40px; display: flex;
+      justify-content: space-between; align-items: center; z-index: 100;
+    }
+    .navbar ul { display: flex; gap: 20px; list-style: none; }
+    .navbar a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    .navbar a:hover { color: #ffa500; }
+    .logo { font-weight: bold; font-size: 1.2rem; letter-spacing: 1px; }
+
+    .page-container {
+      min-height: 100vh; padding: 120px 20px 40px 20px; background: #111;
+      display: flex; justify-content: center; align-items: flex-start;
+    }
+
+    .booking-form {
+      width: 100%; max-width: 600px; background: #1a1a1a; padding: 40px;
+      border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .booking-form h2 { color: #ffa500; margin-bottom: 20px; text-align: center; }
+
+    .form-group { margin-bottom: 25px; }
+    .form-group label { display: block; margin-bottom: 10px; color: #ccc; font-size: 0.9rem; }
+    .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="date"], .form-group select {
+      width: 100%; padding: 12px; background: #2a2a2a; border: 1px solid #333; color: #fff; border-radius: 4px; font-size: 1rem;
+    }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: #ffa500; }
+
+    /* SLIDER CSS */
+    .price-container { background: #2a2a2a; padding: 15px; border-radius: 4px; border: 1px solid #333; }
+    .price-value { font-size: 1.2rem; color: #ffa500; font-weight: bold; margin-bottom: 10px; display: block; }
+    input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%;
+      background: #ffa500; cursor: pointer; margin-top: -8px; box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+    }
+    input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #555; border-radius: 2px; }
+    
+    .btn {
+      padding: 12px 30px; background: #fff; color: #000; border: none; cursor: pointer;
+      font-weight: bold; border-radius: 4px; transition: background 0.3s; width: 100%; font-size: 1rem;
+    }
+    .btn:hover { background: #ffa500; }
+
+    .footer { text-align: center; padding: 30px; background: #000; border-top: 1px solid #333; font-size: 0.9rem; opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">FIND YOUR WAY</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="hotels.html" style="color:#ffa500">Hotels</a></li>
+    <li><a href="guides.html">Guides</a></li>
+    <li><a href="#" onclick="alert('Transportation Coming Soon')">Transportation</a></li>
+  </ul>
+</nav>
+
+<section class="page-container">
+  <div class="booking-form">
+    <h2>Book Your Hotel</h2>
+    <form onsubmit="handleHotelSearch(event)">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination">
+          <option value="Cox's Bazar">Cox's Bazar</option>
+          <option value="Bandarban">Bandarban</option>
+          <option value="Sylhet" disabled>Sylhet (Coming Soon)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="priceRange">Hotel Budget: <span id="priceDisplay" class="price-value">9,000 BDT</span></label>
+        <div class="price-container">
+          <input type="range" id="priceRange" name="budget" min="3000" max="15000" step="500" value="9000" oninput="updatePriceDisplay(this.value)">
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #888; margin-top: 5px;">
+            <span>3,000 BDT</span>
+            <span>15,000 BDT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Check-in Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Find Your Way | Travel Smart, Travel Easy</p>
+</footer>
+
+<script src="script.js"></script> 
+
+<script>
+  function updatePriceDisplay(val) {
+    const formatted = Number(val).toLocaleString();
+    document.getElementById('priceDisplay').innerText = formatted + " BDT";
+  }
+
+  // You can remove the old handleSubmit function here since we are using handleHotelSearch from script.js
+</script>
+
+
+</body>
+</html>

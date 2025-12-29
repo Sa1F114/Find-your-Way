@@ -1,0 +1,243 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+    .navbar ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+        .navbar a:hover {
+            color: #ffa500;
+        }
+
+        .navbar a.active {
+            color: #ffa500;
+        }
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* HERO SECTION (Index Page) */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    padding: 20px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* FORMS & PAGE CONTAINERS */
+.page-container {
+    min-height: 100vh;
+    padding: 120px 20px 40px 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.booking-form {
+    width: 100%;
+    max-width: 600px;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+    .booking-form h2 {
+        color: #ffa500;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 10px;
+        color: #ccc;
+        font-size: 0.9rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group select {
+        width: 100%;
+        padding: 12px;
+        background: #2a2a2a;
+        border: 1px solid #333;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ffa500;
+        }
+
+/* SLIDERS */
+.price-container {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.price-value {
+    font-size: 1.2rem;
+    color: #ffa500;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: #ffa500;
+        cursor: pointer;
+        margin-top: -8px;
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 4px;
+        cursor: pointer;
+        background: #555;
+        border-radius: 2px;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+/* BUTTONS */
+.btn {
+    padding: 12px 30px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%; /* Full width on forms */
+    text-align: center;
+}
+
+.btn-hero {
+    width: auto; /* Auto width on hero */
+}
+
+.btn:hover {
+    background: #ffa500;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+        .navbar ul {
+            display: none;
+        }
+    /* Simplified for mobile */
+}

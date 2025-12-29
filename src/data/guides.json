@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Mong Marma",
+    "location": "Bandarban",
+    "pricePerDay": 2300,
+    "experience": 6,
+    "contact": "01730000001"
+  },
+  {
+    "name": "Kyaw Aung",
+    "location": "Bandarban",
+    "pricePerDay": 2400,
+    "experience": 7,
+    "contact": "01730000002"
+  },
+  {
+    "name": "Thanchi Lian",
+    "location": "Bandarban",
+    "pricePerDay": 4000,
+    "experience": 8,
+    "contact": "01730000003"
+  },
+  {
+    "name": "Ratan Hassan",
+    "location": "Bandarban",
+    "pricePerDay": 2100,
+    "experience": 5,
+    "contact": "01730000004"
+  },
+  {
+    "name": "Biplob Chakma",
+    "location": "Bandarban",
+    "pricePerDay": 2200,
+    "experience": 6,
+    "contact": "01730000005"
+  },
+  {
+    "name": "Suman Chowdhury",
+    "location": "Bandarban",
+    "pricePerDay": 3500,
+    "experience": 7,
+    "contact": "01730000006"
+  },
+  {
+    "name": "Jewel Tanchangya",
+    "location": "Bandarban",
+    "pricePerDay": 2400,
+    "experience": 6,
+    "contact": "01730000007"
+  },
+  {
+    "name": "Rasel Hossain",
+    "location": "Bandarban",
+    "pricePerDay": 2000,
+    "experience": 4,
+    "contact": "01730000008"
+  },
+  {
+    "name": "Saiful Islam",
+    "location": "Bandarban",
+    "pricePerDay": 2100,
+    "experience": 5,
+    "contact": "01730000011"
+  },
+  {
+    "name": "Minhaj Marma",
+    "location": "Bandarban",
+    "pricePerDay": 2300,
+    "experience": 6,
+    "contact": "01730000012"
+  },
+  {
+    "name": "Sifat Chakma",
+    "location": "Bandarban",
+    "pricePerDay": 2400,
+    "experience": 6,
+    "contact": "01730000013"
+  }
+
+]

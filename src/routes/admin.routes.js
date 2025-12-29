@@ -1,18 +1,18 @@
-// JavaScript source code
 
-// src/routes/admin.routes.js
 import express from "express";
-import { auth } from "../middleware/auth.middleware.js";
-import { adminOnly } from "../middleware/role.middleware.js";
 import Guide from "../models/Guide.js";
 import Hotel from "../models/Hotel.js";
 
 const router = express.Router();
 
-router.use(auth, adminOnly);
+// anyone can add
+router.post("/guide", async (req, res) => {
+    res.json(await Guide.create(req.body));
+});
 
-router.post("/guide", async (req, res) => res.json(await Guide.create(req.body)));
-router.post("/hotel", async (req, res) => res.json(await Hotel.create(req.body)));
+router.post("/hotel", async (req, res) => {
+    res.json(await Hotel.create(req.body));
+});
 
 router.delete("/guide/:id", async (req, res) => {
     await Guide.findByIdAndDelete(req.params.id);
@@ -25,4 +25,3 @@ router.delete("/hotel/:id", async (req, res) => {
 });
 
 export default router;
-
