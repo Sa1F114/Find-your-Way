@@ -1,7 +1,7 @@
 // ==========================================
 // 1. GLOBAL CONFIGURATION
 // ==========================================
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = '/api';
 
 // ==========================================
 // 2. UI SLIDER LOGIC (Keeps your forms working)
